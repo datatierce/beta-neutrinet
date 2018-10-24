@@ -1,7 +1,10 @@
 ---
 title: Home
-body_classes: title-center title-h1h2
+media_order: cats.jpg
+body_classes: 'title-center title-h1h2'
 ---
+
+![](cats.jpg)
 
 # Say Hello to Grav!
 ## installation successful...

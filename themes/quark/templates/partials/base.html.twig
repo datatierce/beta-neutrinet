@@ -23,14 +23,14 @@
         {% do assets.addCss('theme://css/custom.css') %}
         {% do assets.addCss('theme://css/line-awesome.min.css') %}
     {% endblock %}
-    {{ assets.css() }}
+    {{ assets.css()|raw }}
 
     {% block javascripts %}
         {% do assets.addJs('jquery', 101) %}
         {% do assets.addJs('theme://js/jquery.treemenu.js', {group:'bottom'}) %}
         {% do assets.addJs('theme://js/site.js', {group:'bottom'}) %}
     {% endblock %}
-    {{ assets.js() }}
+    {{ assets.js()|raw }}
 
 {% endblock head %}
 </head>
@@ -54,7 +54,6 @@
                         {% if config.plugins.login.enabled and grav.user.username %}
                             <span class="login-status-wrapper"><i class="fa fa-user"></i> {% include 'partials/login-status.html.twig' %}</span>
                         {% endif %}
-
                     </section>
                 </nav>
             </section>
@@ -93,7 +92,7 @@
     </section>
 {% endblock %}
 
-    
+
     <div class="mobile-container">
         <div class="overlay" id="overlay">
             <div class="mobile-logo">
@@ -106,7 +105,7 @@
     </div>
 
 {% block bottom %}
-    {{ assets.js('bottom') }}
+    {{ assets.js('bottom')|raw }}
 {% endblock %}
 
 </body>

@@ -1,0 +1,7 @@
+.overlay-light .image-overlay {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.overlay-dark .image-overlay {
+    background: rgba(0, 0, 0, 0.2);
+}
